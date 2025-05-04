@@ -47,7 +47,7 @@ body {
 .perfil {
   position: relative;
   z-index: 2;
-  background-color: rgba(148, 159, 191, 0.826);
+  background-color: rgba(96, 132, 242, 0.826);
   border-radius: 20px;
   box-shadow: 0 8px 25px  rgba(76, 146, 250, 0.955);
   padding: 40px 30px;
@@ -59,7 +59,7 @@ body {
   width: 180px;
   height: 180px;
   margin: 0 auto 20px;
-  border: 6px solid #409fc4ba;
+  border: 6px solid #1c5369fd;
   border-radius: 50%;
   overflow: hidden;
 }
