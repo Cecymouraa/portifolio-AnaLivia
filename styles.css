@@ -1,0 +1,673 @@
+/* Estilos globais */
+* {
+  box-sizing: border-box;
+  background-color: transparent;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: transparent;
+}
+
+/* Área inicial */
+.inicio {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 20px 40px;
+  height: 100vh;
+  overflow: hidden;
+  background-color: transparent;
+}
+
+@media (max-width: 768px) {
+  .inicio {
+    height: auto;
+    padding: 60px 20px;
+  }
+}
+
+.inicio::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("img//fundo-azul.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  z-index: 0;
+}
+
+.perfil {
+  position: relative;
+  z-index: 2;
+  background-color: rgba(50, 100, 237, 0.826);
+  border-radius: 20px;
+  box-shadow: 0 8px 25px  rgba(3, 99, 244, 0.955);
+  padding: 40px 30px;
+  max-width: 300px;
+  text-align: center;
+}
+
+.foto-perfil {
+  width: 180px;
+  height: 180px;
+  margin: 0 auto 20px;
+  border: 6px solid #409fc4ba;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.foto-perfil img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.nome-perfil {
+  font-size: 40px;
+  font-weight: bold;
+  color: #112438;
+  margin-top: 20px;
+}
+
+.profissao {
+  font-size: 16px;
+  color: #2e1764;
+  margin-bottom: 20px;
+}
+
+.redes-sociais {
+  margin-top: 20px;
+}
+
+.redes-sociais a {
+  color: rgb(17, 52, 75);
+  margin: 0 10px;
+  font-size: 24px;
+  transition: 0.3s;
+  text-decoration: none;
+}
+
+.redes-sociais a:hover {
+  color: #4c3dbd6c;
+}
+
+.navegacao {
+  position: relative;
+  background-color:  #5590f691 !important;
+  font-size: 20px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  box-shadow: none;
+}
+
+.navegacao ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 2rem;
+}
+
+.navegacao li {
+  position: relative;
+}
+
+.navegacao a {
+  color: #191172;
+  text-decoration: none;
+  font-weight: bold;
+  position: relative;
+  padding: 5px 0;
+  font-size: 16px; /* <-- ALTERADO para texto menor */
+}
+
+.navegacao a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background-color: #1642c7;
+  left: 0;
+  bottom: 0;
+  transition: width 0.3s ease;
+}
+
+.navegacao a:hover::after {
+  width: 100%;
+}
+
+.navegacao a:hover {
+  color: #096d86;
+}
+
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .navegacao {
+    position: relative;
+    padding: 10px 0;
+    background-color: transparent;
+  }
+
+  .navegacao ul {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
+  .navegacao li {
+    text-align: center;
+  }
+
+  .navegacao a {
+    font-size: 16px;
+    padding: 5px 0;
+  }
+
+  .inicio {
+    padding-top: 100px;
+  }
+}
+
+/* Container geral */
+.sobre-mim-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem;
+  flex-wrap: wrap;
+}
+
+/* Imagem única */
+.imagem-unica {
+  width: 300px;
+  max-width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+/* Texto */
+.sobre-mim-texto {
+  flex: 1;
+  max-width: 600px;
+}
+
+.sobre-mim-texto h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #215386;
+}
+
+.sobre-mim-texto p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+/* Responsivo para celular */
+@media (max-width: 768px) {
+  .sobre-mim-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .imagem-unica {
+    width: 80%;
+    height: auto;
+  }
+
+  .sobre-mim-texto h2 {
+    font-size: 1.5rem;
+  }
+
+  .sobre-mim-texto p {
+    font-size: 0.95rem;
+  }
+}
+
+
+.assinatura {
+  font-family: cursive;
+  font-size: 1.4rem;
+  text-align: right;
+}
+
+/* Responsivo - Mobile */
+@media (max-width: 768px) {
+  .sobre-mim-container {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .imagem-grande {
+    width: 160px;
+    height: 200px;
+  }
+
+  .imagem-pequena {
+    width: 75px;
+    height: 90px;
+  }
+
+  .sobre-mim-texto h2 {
+    font-size: 1.4rem;
+  }
+
+  .sobre-mim-texto p {
+    font-size: 1rem;
+  }
+
+  .assinatura {
+    font-size: 1.2rem;
+  }
+}
+
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .sobre-mim-container {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .imagem-grande {
+    width: 200px;
+    height: 240px;
+  }
+
+  .imagem-pequena {
+    width: 90px;
+    height: 110px;
+  }
+
+  .sobre-mim-texto h2 {
+    font-size: 1.4rem;
+  }
+
+  .sobre-mim-texto p {
+    font-size: 1rem;
+  }
+
+  .assinatura {
+    font-size: 1.2rem;
+  }
+}
+
+
+
+/* Galeria */
+.galeria {
+  padding: 40px;
+  text-align: center;
+}
+
+.galeria h2 {
+  font-size: 32px;
+  color: #0f375e;
+  margin-bottom: 20px;
+}
+
+.fotos-galeria {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 40px;
+  padding: 20px 0;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+
+.fotos-galeria img {
+  width: 200px;
+  height: 260px;
+  object-fit: contain;
+  object-position: center;
+  background-color: #ffffff; /* opcional, para preencher as bordas */
+}
+
+@media (max-width: 768px) {
+  .fotos-galeria {
+    flex-direction: row;
+  }
+
+  .fotos-galeria img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    object-fit: cover; /* Troque de 'contain' para 'cover' */
+    object-position: center; /* Centraliza a imagem */
+    margin: 0 auto; /* Centraliza horizontalmente */
+  }
+}
+
+.fotos-galeria img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Carrossel */
+#avaliacoes {
+  position: relative;
+  padding: 60px 40px;
+  background-image: url('img/fundo-azul.jpg');
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  z-index: 1;
+}
+
+#avaliacoes::before {
+  content: none;
+}
+
+.feedbacks-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+.feedbacks-container h2 {
+  font-size: 32px;
+  margin-bottom: 30px;
+  color: #2c4d63;
+}
+
+.feedbacks-carrossel {
+  display: flex;
+  overflow-x: auto;
+  gap: 20px;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  padding: 20px 0;
+}
+
+.feedback-card {
+  flex: 0 0 auto;
+  width: 280px;
+  background-color: rgba(177, 209, 240, 0.966);
+  color: #333;
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  scroll-snap-align: center;
+  white-space: normal;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+
+@media (max-width: 768px) {
+  .feedbacks-carrossel {
+    flex-direction: row;
+  }
+
+  .feedback-card {
+    width: 90vw;
+    max-width: 300px;
+    flex-shrink: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .navegacao a {
+    font-size: 50px;
+  }
+}
+
+.carrossel-botoes {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.carrossel-botoes button {
+  background-color: transparent;
+  color: #32073f;
+  font-size: 20px;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.carrossel-botoes button:hover {
+  background-color: #329ecf;
+}
+
+.fundo-feedback-contato {
+  background-image: url('img/6869469.jpg');
+  background-size: cover;
+  background-position: center;
+  padding: 60px 0;
+  color: #ffffff;
+}
+
+/* Contato */
+#avaliacoes, #contato {
+  padding: 60px 40px;
+}
+
+.feedbacks-container, .contato-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  color: #09151a;
+  border-radius: 12px;
+  padding: 40px;
+  color: #155666cb;
+  align-items: center;
+  text-decoration: none;
+}
+
+.contato-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.contato-container ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.contato-container a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.contato-container a:hover {
+  color: #0471286c;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .sobre-mim-container {
+    flex-direction: column-reverse;
+    gap: 20px;
+  }
+
+  .foto-perfil {
+    width: 150px;
+    height: 150px;
+  }
+
+  .perfil {
+    max-width: 80%;
+    padding: 30px;
+  }
+
+  .galeria {
+    padding: 20px;
+  }
+
+  .feedback-card {
+    width: 90%;
+    max-width: 400px;
+  }
+
+  .carrossel-botoes {
+    flex-direction: column;
+  }
+
+  .carrossel-botoes button {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .fundo-feedback-contato {
+    padding: 40px 20px;
+  }
+
+  .contato-container {
+    padding: 20px;
+    max-width: 100%;
+  }
+
+  .contato-container ul {
+    padding-left: 0;
+    text-align: center;
+  }
+
+  .contato-container a {
+    display: block;
+    margin: 5px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .perfil {
+    padding: 20px;
+    max-width: 90%;
+  }
+
+  .foto-perfil {
+    width: 120px;
+    height: 120px;
+  }
+
+  .nome-perfil {
+    font-size: 30px;
+  }
+
+  .profissao {
+    font-size: 14px;
+  }
+
+  .navegacao a {
+    font-size: 13px;
+  }
+
+  .galeria h2 {
+    font-size: 28px;
+  }
+
+  .fotos-galeria img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+
+  .feedbacks-container h2 {
+    font-size: 28px;
+  }
+
+  .feedback-card {
+    padding: 15px;
+  }
+
+  .carrossel-botoes button {
+    font-size: 18px;
+  }
+}
+
+/*FORMULÁRIO- MEXE NÃO PLMDS*/
+
+/* Formulário de Feedback */
+/* Box-shadow para o formulário */
+.form-container {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Box shadow suave */
+  max-width: 600px;
+  margin: 20px auto; /*e o formulário fique centralizado na tela */
+}
+
+/* do formulário de feedback */
+.formulario-feedback {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+#formulario h2 {
+  text-align: center; /* Centraliza o título */
+  color: #2f6a92; /* Altere a cor do título aqui */
+}
+
+
+.formulario-feedback input,
+.formulario-feedback textarea {
+  padding: 10px;
+  font-size: 1em;
+  border: 1px solid #dddddd;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.formulario-feedback button {
+  background-color: #3c7aa3;
+  color: #ffffff;
+  padding: 10px;
+  font-size: 1em;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.formulario-feedback button:hover {
+  background-color: #3885ac;
+}
+
+ 
+
+/*Rodapé maria cecilia moura lira 2025*/
+
+/* Rodapé */
+.rodape {
+  width: 100%;
+  padding: 15px;
+  background-color: #2f6a92; /*  a cor de fundo  */
+  color: hsl(192, 9%, 89%); /* Cor do texto */
+  text-align: center;
+  font-size: 17px;
+  position: relative; 
+  margin-top: 40px; /* Espaço antes do rodapé */
+}
+
+@media (max-width: 768px) {
+  .rodape {
+    font-size: 16px; /* fonte em telas menores */
+  }
+}
