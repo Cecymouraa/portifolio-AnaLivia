@@ -47,9 +47,9 @@ body {
 .perfil {
   position: relative;
   z-index: 2;
-  background-color: rgba(50, 100, 237, 0.826);
+  background-color: rgba(148, 159, 191, 0.826);
   border-radius: 20px;
-  box-shadow: 0 8px 25px  rgba(3, 99, 244, 0.955);
+  box-shadow: 0 8px 25px  rgba(76, 146, 250, 0.955);
   padding: 40px 30px;
   max-width: 300px;
   text-align: center;
